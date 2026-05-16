@@ -222,3 +222,4 @@ data/
 *.csv
 *.zip
 *.pdf
+qdrant_storage/

@@ -19,7 +19,19 @@ class Settings(BaseSettings):
     environment: Literal["dev", "prod"] = "dev"
     log_level: str = "INFO"
 
-    # LLM provider — "groq" for everything per current plan
+    # Vector store
+    qdrant_url: str = "http://localhost:6333"
+    qdrant_api_key: str | None = None
+    qdrant_collection: str = "imr_determinations"
+
+    # Embeddings
+    embedding_model: str = "BAAI/bge-small-en-v1.5"
+    embedding_dim: int = 384
+
+    # Retrieval
+    top_k: int = 5
+
+    # LLM provider — Groq for everything
     llm_provider: Literal["groq"] = "groq"
     groq_api_key: str | None = None
     groq_model: str = "llama-3.1-8b-instant"
