@@ -30,6 +30,9 @@ class Settings(BaseSettings):
     # Retrieval
     top_k: int = 5
 
+    # Minimum similarity score for a result to be considered relevant
+    min_retrieval_score: float = 0.4
+
     # LLM provider — Groq for everything
     llm_provider: Literal["groq"] = "groq"
     groq_api_key: str | None = None
