@@ -36,7 +36,7 @@ class Settings(BaseSettings):
     # LLM provider — Groq for everything
     llm_provider: Literal["groq"] = "groq"
     groq_api_key: str | None = None
-    groq_model: str = "llama-3.1-8b-instant"
+    groq_model: str = "openai/gpt-oss-20b"
 
 
 @lru_cache

@@ -43,7 +43,7 @@ def generate(system_prompt: str, user_prompt: str, temperature: float = 0.2) -> 
             {"role": "user", "content": user_prompt},
         ],
         temperature=temperature,
-        max_tokens=1024,
+        max_tokens=2048,
     )
 
     answer = response.choices[0].message.content or ""
