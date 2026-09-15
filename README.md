@@ -2,7 +2,7 @@
 
 A retrieval-augmented question-answering system over **42,241 California Department of Managed Health Care (DMHC) Independent Medical Review (IMR) determinations**. Ask a natural-language question like *"Why are mental health admissions often denied?"* and get a grounded, cited answer drawn from real insurance dispute records.
 
-Built as a portfolio project to practice RAG fundamentals, vector search, and modern Python deployment patterns — with an emphasis on **grounding and abstention**, informed by prior research on LLM hallucination.
+Built as a portfolio project to practice RAG fundamentals, vector search, and modern Python deployment patterns with an emphasis on **grounding and abstention**, informed by prior research on [LLM hallucination](https://faithfulorfabricated.streamlit.app/).
 
 ## What it does
 
@@ -11,7 +11,7 @@ Given a question, the system:
 1. Embeds the question into a vector
 2. Retrieves the most semantically similar IMR records from a vector database (with optional metadata filtering, e.g. by diagnosis category)
 3. Passes the retrieved records to an LLM with a prompt designed to answer **only** from the provided evidence
-4. Returns a concise answer that cites each claim by the record's reference ID — or abstains when the question falls outside the dataset
+4. Returns a concise answer that cites each claim by the record's reference ID or abstains when the question falls outside the dataset
 
 ## Tech stack
 
